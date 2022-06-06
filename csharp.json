@@ -1,0 +1,148 @@
+{
+    "course": "Learn C#",
+    "description": "C# is a static programming language which lets us write code that runs atop Microsoft's .NET framework.",
+    "prerequisites": [],
+    "lectures": [
+        {
+            "title": "Hello, World!",
+            "parts": [
+                {
+                    "title": "Introduction",
+                    "html": "<hr/><p>Java is an object oriented language (OOP). Java objects are part of so-called \"Java classes\".</p><p>Let's go over the Hello world program, which simply prints \"Hello, World!\" to the screen.</p><pre><code>public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"This will be printed\");\n    }\n}\n</code></pre><p>The first line defines a class called Main.</p><pre><code>public class Main {\n</code></pre><p>In Java, every line of code that can actually run needs to be inside a class. This line declares a class named <code>Main</code>, which is <code>public</code>, that means that any other class can access it. This is not important for now, so don't worry. For now, we'll just write our code in a class called Main, and talk about objects later on.</p><p>Notice that when we declare a public class, we must declare it inside a file with the same name (Main.java), otherwise we'll get an error when compiling.</p><p>When running the examples on the site, we will not use the public keyword, since we write all our code in one file.</p><p>The next line is:</p><pre><code>public static void main(String[] args) {\n</code></pre><p>This is the entry point of our Java program. the main method has to have this exact signature in order to be able to run our program.</p><ul>\n<li><code>public</code> again means that anyone can access it.</li>\n<li><code>static</code> means that you can run this method without creating an instance of <code>Main</code>.</li>\n<li><code>void</code> means that this method doesn't return any value.</li>\n<li><code>main</code> is the name of the method.</li>\n</ul><p>The arguments we get inside the method are the arguments that we will get when running the program with parameters. It's an array of strings. We will use it in our next lesson, so don't worry if you don't understand it all now.</p><pre><code>System.out.println(\"This will be printed\");\n</code></pre><ul>\n<li><code>System</code> is a pre-defined class that Java provides us and it holds some useful methods and variables.</li>\n<li><code>out</code> is a static variable within System that represents the output of your program (stdout).</li>\n<li><code>println</code> is a method of out that can be used to print a line.</li>\n</ul>"
+                }
+            ]
+        },
+        {
+            "title": "Variables and Types",
+            "parts": [
+                {
+                    "title": "Introduction",
+                    "html": "<hr/><p>Although Java is object oriented, not all types are objects. It is built on top of basic variable types called primitives.</p><p>Here is a list of all primitives in Java:</p><ul>\n<li><code>byte</code> (number, 1 byte)</li>\n<li><code>short</code> (number, 2 bytes)</li>\n<li><code>int</code> (number, 4 bytes)</li>\n<li><code>long</code> (number, 8 bytes)</li>\n<li><code>float</code> (float number, 4 bytes)</li>\n<li><code>double</code> (float number, 8 bytes)</li>\n<li><code>char</code> (a character, 2 bytes)</li>\n<li><code>boolean</code> (true or false, 1 byte)</li>\n</ul><p>Java is a strong typed language, which means variables need to be defined before we use them.</p>"
+                },
+                {
+                    "title": "Numbers",
+                    "html": "<p>To declare and assign a number use the following syntax:</p><pre><code>int myNumber;\nmyNumber = 5;\n</code></pre><p>Or you can combine them:</p><pre><code>int myNumber = 5;\n</code></pre><p>To define a double floating point number, use the following syntax:</p><pre><code>double d = 4.5;\nd = 3.0;\n</code></pre><p>If you want to use float, you will have to cast:</p><pre><code>float f = (float) 4.5;\n</code></pre><p>Or, You can use this:</p><pre><code>float f = 4.5f; // (f is a shorter way of casting float)\n</code></pre>"
+                },
+                {
+                    "title": "Characters and Strings",
+                    "html": "<p>In Java, a character is it's own type and it's not simply a number, so it's not common to put an ascii value in it, there is a special syntax for chars:</p><pre><code>char c = 'g';\n</code></pre><p><code>String</code> is not a primitive. It's a real type, but Java has special treatment for String.</p><p>Here are some ways to use a string:</p><pre><code>// Create a string with a constructor\nString s1 = new String(\"Who let the dogs out?\");        // String object stored in heap memory\n// Just using \"\" creates a string, so no need to write it the previous way.\nString s2 = \"Who who who who!\";                         // String literal stored in String pool\n// Java defined the operator + on strings to concatenate:\nString s3 = s1 + s2;\n</code></pre><p>There is no operator overloading in Java but there is the exception that proves the rule - string is the only class where operator overloading is supported. We can concat two strings using + operator. The operator <code>+</code> is only defined for strings, you will never see it with other objects, only primitives.</p><p>You can also concat string to primitives:</p><pre><code>int num = 5;\nString s = \"I have \" + num + \" cookies\"; //Be sure not to use \"\" with primitives.\n</code></pre>"
+                },
+                {
+                    "title": "boolean",
+                    "html": "<p>Every comparison operator in java will return the type boolean. Unlike other languages, it only accepts two special values: <code>true</code> or <code>false</code>. </p><pre><code>boolean b = false;\nb = true;\n\nboolean toBe = false;\nb = toBe || !toBe;\nif (b) {\n    System.out.println(toBe);\n}\n\nint children = 0;\nb = children; // Will not work\nif (children) { // Will not work\n    // Will not work\n}\n\nint a;\nboolean b = true; \nboolean c = false; \na = b + c;            //The following line will give an error\nSystem.out.println(a);\n</code></pre>"
+                }
+            ]
+        },
+        {
+            "title": "Conditionals",
+            "parts": [
+                {
+                    "title": "Introduction",
+                    "html": "<hr/><p>Java uses boolean variables to evaluate conditions. The boolean values <code>true</code> and <code>false</code> are returned when an expression is compared or evaluated.\nFor example:</p><pre><code>int a = 4;\nboolean b = a == 4;\n\nif (b) {\n    System.out.println(\"It's true!\");\n}\n</code></pre><p>Of course we don't normally assign a conditional expression to a boolean. Normally, we just use the short version:</p><pre><code>int a = 4;\n\nif (a == 4) {\n    System.out.println(\"Ohhh! So a is 4!\");\n}\n</code></pre>"
+                },
+                {
+                    "title": "Boolean operators",
+                    "html": "<p>There aren't that many operators to use in conditional statements and most of them are pretty straight forward:</p><pre><code>int a = 4;\nint b = 5;\nboolean result;\nresult = a &lt; b; // true\nresult = a &gt; b; // false\nresult = a &lt;= 4; // a smaller or equal to 4 - true\nresult = b &gt;= 6; // b bigger or equal to 6 - false\nresult = a == b; // a equal to b - false\nresult = a != b; // a is not equal to b - true\nresult = a &gt; b || a &lt; b; // Logical or - true\nresult = 3 &lt; a &amp;&amp; a &lt; 6; // Logical and - true\nresult = !result; // Logical not - false\n</code></pre>"
+                },
+                {
+                    "title": "if - else and between",
+                    "html": "<p>The if, else statement in Java is pretty simple.</p><pre><code>if (a == b) {\n    // a and b are equal, let's do something cool\n}\n</code></pre><p>And we can also add an else statement after an if, to do something if the condition is not true</p><pre><code>if (a == b) {\n    // We already know this part\n} else {\n    // a and b are not equal... :/\n}\n</code></pre><p>The if - else statements doesn't have to be in several lines with {}, if can be used in one line, or without the {}, for a single line statment.</p><pre><code>if (a == b)\n    System.out.println(\"Another line Wow!\");\nelse\n    System.out.println(\"Double rainbow!\");\n</code></pre><p>Although this method might be useful for making your code shorter by using fewer lines, we strongly recommend for beginners not to use this short version of statements and to always use the full version with {}. This goes to every statement that can be shorted to a single line (for, while, etc).</p>"
+                },
+                {
+                    "title": "The ugly side of if",
+                    "html": "<p>There is a another way to write a one line if - else statement by using the operator ? :</p><pre><code>int a = 4;\nint result = a == 4 ? 1 : 8;\n\n// result will be 1\n// This is equivalent to\nint result;\n\nif (a == 4) {\n    result = 1;\n} else {\n    result = 8;\n}\n</code></pre><p>Again, we strongly recommend for beginners not to use this version of if.</p>"
+                },
+                {
+                    "title": "== and equals",
+                    "html": "<p>The operator <code>==</code> works a bit different on objects than on primitives.\nWhen we are using objects and want to check if they are equal, the operator <code>==</code> will say if they are the same, if you want to check if they are logically equal, you should use the <code>equals</code> method on the object. For example:</p><pre><code>String a = new String(\"Wow\");\nString b = new String(\"Wow\");\nString sameA = a;\n\nboolean r1 = a == b;      // This is false, since a and b are not the same object\nboolean r2 = a.equals(b); // This is true, since a and b are logically equals\nboolean r3 = a == sameA;  // This is true, since a and sameA are really the same object\n</code></pre>"
+                }
+            ]
+        },
+        {
+            "title": "Arrays",
+            "parts": [
+                {
+                    "title": "Introduction",
+                    "html": "<hr/><p>Arrays in Java are also objects. They need to be declared and then created.\nIn order to declare a variable that will hold an array of integers, we use the following syntax:</p><pre><code>int[] arr;\n</code></pre><p>Notice there is no size, since we didn't create the array yet.</p><pre><code>arr = new int[10];\n</code></pre><p>This will create a new array with the size of 10. We can check the size by printing the array's length:</p><pre><code>System.out.println(arr.length);\n</code></pre><p>We can access the array and set values:</p><pre><code>arr[0] = 4;\narr[1] = arr[0] + 5;\n</code></pre><p>Java arrays are 0 based, which means the first element in an array is accessed at index 0 (e.g: arr[0], which\naccesses the first element). Also, as an example, an array of size 5 will only go up to index 4 due to it being 0 based.</p><pre><code>int[] arr = new int[5];\n//accesses and sets the first element\narr[0] = 4;\n</code></pre><p>We can also create an array with values in the same line:</p><pre><code>int[] arr = {1, 2, 3, 4, 5};\n</code></pre><p>Don't try to print the array without a loop, it will print something nasty like [<a class=\"__cf_email__\" data-cfemail=\"a8e1e8ce9fcd9ec9919e86\" href=\"/cdn-cgi/l/email-protection\">[email\u00a0protected]</a> \nTo print out an array, use the following code:</p><pre><code>for (int i=0; i &lt; arr.length; i++) {\n    System.out.println(arr[i]);\n}\n</code></pre>"
+                }
+            ]
+        },
+        {
+            "title": "Loops",
+            "parts": [
+                {
+                    "title": "Introduction",
+                    "html": "<hr/><p>There are two kind of loops in Java, <code>for</code> and <code>while</code>.</p>"
+                },
+                {
+                    "title": "For",
+                    "html": "<p>The for loop has three sections:</p><pre><code>for (int i = 0; i &lt; 3; i++) {}\n</code></pre><p>First section runs once when we enter the loop.</p><p>Second section is the gate keeper, if it returns <code>true</code>, we run the statements in the loop, if it returns <code>false</code>, we exit the loop. It runs right after the first section for the first time, then every time the loop is finished and the third section is run.</p><p>The third section is the final statement that will run every time the loop runs.</p><p>So in the case we have just seen, the loop will run 3 times. Here is the order of the commands:</p><pre><code>int i = 0;\ni &lt; 3 // 0 &lt; 3 = true\n      // Inside of loop\ni++ // i is now 1\ni &lt; 3 // 1 &lt; 3 = true\n      // Inside of loop\ni++ // i is now 2\ni &lt; 3 // 2 &lt; 3 = true\n      // Inside of loop\ni++ // i is now 3\ni &lt; 3 // 3 &lt; 3 = false\n      // Loop is done...\n</code></pre><p>We can omit the first and third section of the loop (although it will be weird), and the loop will still work:</p><pre><code>for (;i &lt; 5;) {}\n</code></pre><p>For cases where we want to use a loop that look like that, we use a <code>while</code> loop</p>"
+                },
+                {
+                    "title": "While",
+                    "html": "<p>The syntax is very similar to the previous for we looked at:</p><pre><code>while (condition) {}\n</code></pre><p>The condition will run for the first time when entering and every time the loop is done.\nIf it returns false, the loop will not run.</p><p>If we want the loop to always run at least one, we can use do-while</p><pre><code>do {\n\n} while(condition);\n</code></pre><p>Notice the <code>;</code> in the end of the do-while.</p>"
+                },
+                {
+                    "title": "Foreach",
+                    "html": "<p>Another version of for, is the foreach. The keyword we use is still <code>for</code>, but when we want to iterate on the elements inside an array we can simply use it:</p><pre><code>int[] arr = {2, 0, 1, 3};\nfor (int el : arr) {\n    System.out.println(el);\n}\n</code></pre><p>This is a short version and equivalent to:</p><pre><code>int[] arr = {1, 9, 9, 5};\nfor (int i = 0; i &lt; arr.length; i++) {\n    int el = arr[i];\n    System.out.println(el);\n}\n</code></pre><p>Notice that if you want to use the index of the element inside the loop, you have to use the longer version and can't use foreach.</p>"
+                },
+                {
+                    "title": "break and continue",
+                    "html": "<p>These two keywords help us control the loop from within it.\n<code>break</code> will cause the loop to stop and will go immediately to the next statement after the loop:</p><pre><code>int i;\nfor (i = 0; i &lt; 5; i++) {\n    if (i &gt;= 2) {\n        break;\n    }\n    System.out.println(\"Yuhu\");\n}\nSystem.out.println(i);\n// Output:\n// Yuhu\n// Yuhu\n// 2\n</code></pre><p><code>continue</code> will stop the current iteration and will move to the next one. Notice that inside a for loop, it will still run the third section.</p><pre><code>int i;\nfor (i = 0; i &lt; 5; i++) {\n    if (i &gt;= 3) {\n        break;\n    }\n    System.out.println(\"Yuhu\");\n    if (i &gt;= 1) {\n        continue;\n    }\n    System.out.println(\"Tata\");\n}\nSystem.out.println(i);\n// Output\n// Yuhu\n// Tata\n// Yuhu\n// Yuhu\n// 3\n</code></pre>"
+                }
+            ]
+        },
+        {
+            "title": "Functions",
+            "parts": [
+                {
+                    "title": "Introduction",
+                    "html": "<hr/><p>In Java, all function definitions must be inside classes. We also call functions methods. Let's look at an example method</p><pre><code>public class Main {\n    public static void foo() {\n        // Do something here\n    }\n}\n</code></pre><p><code>foo</code> is a method we defined in class Main. Notice a few things about <code>foo</code>.</p><ul>\n<li><code>static</code> means this method belongs to the class Main and not to a specific instance of Main. Which means we can call the method from a different class like that <code>Main.foo()</code>.</li>\n<li><code>void</code> means this method doesn't return a value. Methods can return a single value in Java and it has to be defined in the method declaration. However, you can use <code>return</code> by itself to exit the method.</li>\n<li>This method doesn't get any arguments, but of course Java methods can get arguments as we'll see further on.</li>\n</ul>"
+                },
+                {
+                    "title": "Arguments",
+                    "html": "<p>I always like to say that arguments to Java methods are passed by value, although some might disagree with my choice of words, I find it the best way to explain and understand how it works exactly.</p><p>By value means that arguments are copied when the method runs. Let's look at an example.</p><pre><code>public void bar(int num1, int num2) {\n    ...\n}\n</code></pre><p>Here is a another place in the code, where bar is called</p><pre><code>int a = 3;\nint b = 5;\nbar(a, b);\n</code></pre><p>You can picture in your head that when <code>bar(a, b)</code> is run, it's like in the beginning of <code>bar</code> the following two lines are written:</p><pre><code>int num1 = a;\nint num2 = b;\n</code></pre><p>And only then the rest of the method is run.</p><p>This means that <code>a</code> value get copied to <code>num1</code> and <code>b</code> value get copied to <code>num2</code>. Changing the values of <code>num1</code> and <code>num2</code> will not affect <code>a</code> and <code>b</code>.</p><p>If the arguments were objects, the rules remain the same, but it acts a bit differently. Here is a an example:</p><pre><code>public void bar2(Student s1, Student s2) {\n    ...\n}\n</code></pre><p>And here is how we use it</p><pre><code>Student joe = new Student(\"joe\");\nStudent jack = new Student(\"jack\");\nbar2(joe, jack);\n</code></pre><p>Again we can picture the same two lines in the beginning of <code>bar2</code></p><pre><code>Student s1 = joe;\nStudent s2 = jack;\n</code></pre><p>But when we assign objects, it's a bit different than assigning primitives. <code>s1</code> and <code>joe</code> are two different references to the same object. <code>s1 == joe</code> is true. This means that running methods on <code>s1</code> will change the object <code>joe</code>. But if we'll change the value of <code>s1</code> as a reference, it will not affect the reference <code>joe</code>.</p><pre><code>s1.setName(\"Chuck\"); // joe name is now Chuck as well\ns1 = new Student(\"Norris\"); // s1 is a new student, different than joe with the name of Norris\n// s1 == joe   is not true anymore\n</code></pre>"
+                },
+                {
+                    "title": "Non static methods",
+                    "html": "<p>Non static methods in Java are used more than static methods. Those methods can only be run on objects and not on the whole class.</p><p>Non static methods can access and alter the field of the object.</p><pre><code>public class Student {\n    private String name;\n    public String getName() {\n        return name;\n    }\n    public void setName(String name) {\n        this.name = name;\n    }\n}\n</code></pre><p>Calling the methods will require an object of type <code>Student</code>.</p><pre><code>Student s = new Student();\ns.setName(\"Danielle\");\nString name = s.getName();\n\nStudent.setName(\"Bob\"); // Will not work!\nStudent.getName(); // Will not work!\n</code></pre>"
+                },
+                {
+                    "title": "Summary",
+                    "html": "<ul>\n<li>Every Java method has to be within a class</li>\n<li>Static methods belong to a class while non-static methods belong to objects</li>\n<li>All parameters to functions are passed by value, primitives content is copied, while objects are not copied and some would say 'passed by reference'</li>\n</ul>"
+                }
+            ]
+        },
+        {
+            "title": "Objects",
+            "parts": [
+                {
+                    "title": "Introduction",
+                    "html": "<hr/><p>Everything in Java is within classes and objects. Java objects hold a state, state are variables which are saved together within an object, we call them fields or member variables.</p><p>Let start with an example:</p><pre><code>class Point {\n    int x;\n    int y;\n}\n</code></pre><p>This class defined a point with x and y values.</p><p>In order to create an instance of this class, we need to use the keyword <code>new</code>.</p><pre><code>Point p = new Point();\n</code></pre><p>In this case, we used a default constructor (constructor that doesn't get arguments) to create a Point. All classes that don't explicitly define a constructor has a default constructor that does nothing.</p><p>We can define our own constructor:</p><pre><code>class Point {\n    int x;\n    int y;\n\n    Point(int x, int y) {\n        this.x = x;\n        this.y = y;\n    }\n}\n</code></pre><p>This means we can not longer use the default constructor <code>new Point()</code>. We can now only use the defined constructor <code>new Point(4, 1)</code>.</p><p>We can define more than one constructor, so <code>Point</code> can be created in several ways. Let's define the default constructor again.</p><pre><code>class Point {\n    int x;\n    int y;\n\n    Point() {\n        this(0, 0);\n    }\n\n    Point(int x, int y) {\n        this.x = x;\n        this.y = y;\n    }\n}\n</code></pre><p>Notice the usage of the <code>this</code> keyword here. We can use it within a constructor to call a different constructor (in order to avoid code duplication). It can only be the first line within the constructor.</p><p>We also used the <code>this</code> keyword as a reference of the current object we are running on.</p><p>After we defined <code>p</code> we can access <code>x</code> and <code>y</code>.</p><pre><code>p.x = 3;\np.y = 6;\n</code></pre>"
+                },
+                {
+                    "title": "Methods",
+                    "html": "<p>We can now define methods on <code>Point</code>.</p><pre><code>class Point {\n    ... // Our code previously\n    void printPoint() {\n        System.out.println(\"(\" + x + \",\" + y + \")\");\n    }\n\n    Point center(Point other) {\n        // Returns the center between this point the other point\n        // Notice we are using integer, we won't get an accurate value\n        return new Point((x + other.x) / 2, (y + other.y) / 2);\n    }\n}\n</code></pre>"
+                },
+                {
+                    "title": "Public and Private",
+                    "html": "<p>Although we'll talk about modifiers later on, it's important to understand the different between private and public variables and methods.</p><p>When using the keyword <code>private</code> before a variable or a method, it means only the class itself can access the variable or method, when we're using <code>public</code> it means everybody can access it. We usually see constructors defined as public, variables defined as private and methods are separated, some public and some private.</p>"
+                }
+            ]
+        },
+        {
+            "title": "Compiling and Running with Arguments",
+            "parts": [
+                {
+                    "title": "Introduction",
+                    "html": "<hr/><p>This section is used for you to use Java at home and understand the basics of how things are done.</p><p>After creating a simple application that prints something to the screen, you need to compile your code and run it.</p><p>It shouldn't really matter if you use Linux, Mac or Windows. You need to have a console and you need to have the following commands available in order to compile and run Java.</p><ul>\n<li>java (or java.exe)</li>\n<li>javac (or javac.exe)</li>\n</ul><p>In order for those to be available you must download and install JDK (Java Development Kit).</p><p>If we take the code from the previous lesson and put it in a file called MyFirstClass.java, in order to compile it we need to run:</p><pre><code>javac MyFirstClass.java\n</code></pre><p>This will create a file called MyFirstClass.class that holds the compiled java code.</p><p>To run it, we need to run java with the name of the class as the argument (Not the file!)</p><h5>Wrong</h5><pre><code>java MyFirstClass.class\n</code></pre><h5>Right!</h5><pre><code>java MyFirstClass\n</code></pre>"
+                },
+                {
+                    "title": "Arguments",
+                    "html": "<p>The main methods get an array of strings as an argument, these are the command line arguments you may pass to your program.</p><p>Every array in java holds a variable called length that says how many elements are within that array.</p><p>We can go over the arguments with a simple for</p><pre><code>public class Arguments {\n    public static void main(String[] args) {\n        for (int i = 0; i &lt; args.length; i++) {\n            System.out.println(args[i]);\n        }\n    }\n}\n</code></pre><p>And to compile and run it with arguments:</p><pre><code>javac Arguments.java\njava Arguments arg0 arg1 arg2\n</code></pre>"
+                }
+            ]
+        }
+    ],
+    "parts": 33
+}
