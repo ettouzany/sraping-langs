@@ -58,4 +58,4 @@ with open(file_+'.json', 'w') as file:
     output['parts'] = parts_num
     json.dump(output, file, indent=4, separators=(',',': '))
 
-            # file.wite(str(contents[item.text]))
+# file.wite(str(contents[item.text]))
