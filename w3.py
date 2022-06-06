@@ -5,7 +5,7 @@ from pickle import TRUE
 from bs4 import BeautifulSoup as bs
 import json
 import requests
-url = "https://www.learnjavaonline.org/"
+url = "https://www.learn-html.org/"
 
 
 output = {}

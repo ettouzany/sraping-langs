@@ -1,0 +1,241 @@
+{
+    "course": "Learn C#",
+    "description": "C# is a static programming language which lets us write code that runs atop Microsoft's .NET framework.",
+    "prerequisites": [],
+    "lectures": [
+        {
+            "title": "Hello, World!",
+            "parts": [
+                {
+                    "title": "Introduction",
+                    "html": "<hr/><p>Welcome to <em>Learn HTML</em>, the easiest way to learn HTML &amp; CSS online, interactively.</p><p>Learning HTML &amp; CSS is essential for any web developer, and does not require to know how to program using JavaScript.</p><p>Before you begin, I would recommend that you start out by downloading an HTML &amp; CSS IDE. My personal preference\nis to use an IDE by JetBrains. You can download the PyCharm Community Edition for free, which has really good HTML, \nCSS and JavaScript development support built-in, along with all the goodies that a good IDE provides - source code\nintegration, code refactoring, automatic indentation, syntax highlighting, comparison tool, etc. </p><p><strong>Here is a list of HTML, CSS and JavaScript editors you can choose from:</strong></p><ul>\n<li>VS Code (free, recommended) - <a href=\"https://code.visualstudio.com/\">https://code.visualstudio.com/</a></li>\n<li>Atom (Free) - <a href=\"https://atom.io/\">https://atom.io/</a></li>\n<li>JetBrains WebStorm (Commercial) - <a href=\"https://www.jetbrains.com/webstorm/\">https://www.jetbrains.com/webstorm/</a></li>\n<li>Sublime Text (Commercial) - <a href=\"https://www.sublimetext.com/\">https://www.sublimetext.com/</a></li>\n<li>Notepad++ (Windows only) - <a href=\"https://notepad-plus-plus.org/download/v7.html\">https://notepad-plus-plus.org/download/v7.html</a></li>\n</ul><p>In this tutorial you won't actually need an IDE, because all coding is done online.</p>"
+                },
+                {
+                    "title": "Introduction",
+                    "html": "<p>HTML (HyperText Markup Language) is a standard developed over the years to convey information over the internet by \nusing \"hyperlinks\" - or just links as we know them today. As opposed to a PDF, an HTML page is much more dynamic in\nnature, letting you browse the web by clicking on links and interacting with the page. Links could take you either\nto a different location within the current page, or to a different page over the internet.</p><p>The last version of HTML is HTML 5.0, which has a LOT more capabilities than what the web originally had in mind.\nHTML 5 is an extremely comprehensive platform that allows creating a high-end user interface together with the power\nof CSS and JavaScript. HTML 5 is so powerful that it has managed to deprecate Adobe Flash, Microsoft's Silverlight,\nand just about all HTML plugins such as video players, Java applets, and more. </p><p>So what is the difference between HTML, CSS, and JavaScript? First of all, they can all be encapsulated within an \nHTML page, meaning that the browser starts by loading an HTML page, and only then it knows what to load from there.</p><ul>\n<li>An <strong>HTML page</strong> is an HTML document that defines the content of the page by using a special markup similar to XML.</li>\n<li>A <strong>CSS stylesheet</strong> defines the style of the HTML elements in the page. It is either embeeded within an HTML page \nor loaded using the <link/> tag.</li>\n<li><strong>JavaScript</strong> is the programming language used to interact with the HTML page through an API called the DOM \n(Document Object Model) Bindings. In other words, the DOM Bindings are the glue between the programming language and\nthe HTML page that was initially loaded into the browser.</li>\n</ul><p>The basics of this tutorial cover HTML and CSS. The advanced sections also assume knowledge in programming and \nJavaScript. To learn JavaScript, go to https://www.learn-js.org.</p><p>We will be using a CSS framework called Bootstrap by Twitter, the most common CSS library out there \ntoday. The basic principles of a CSS library is pretty much the same - they are all based on the \"grid system\", \nwhich is an easy way to define the layout of an HTML page - a methodology that was developed over the years in web \ndevelopment.</p>"
+                },
+                {
+                    "title": "Your first HTML Page",
+                    "html": "<p>Let's start by creating a simple HTML page. An HTML page has the following basic layout:</p><pre><code>&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n    &lt;head&gt;\n        &lt;!-- head definitions go here --&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        &lt;!-- the content goes here --&gt;\n    &lt;/body&gt;\n&lt;/html&gt;\n</code></pre><p>Let's start by creating a simple page that contains the phrase \"Hello, World!\" in the body. The page will also have \na title - that thing that shows up in the title of the tab in your browser. The <code>&lt;title&gt;</code> element defines the title\nof the HTML page.</p><p>The <code>&lt;!DOCTYPE html&gt;</code> tag defines the document type that the browser is going to render. This is used for legacy reasons.\nIf you want to get to the latest version of HTML (HTML5) then it's recommended to use this tag.</p><p>The <code>&lt;p&gt;</code> element defines a \"paragraph\", a block of text that has a small amount of spacing in between its top and \nbottom.</p><p>Notice how the tags have a start tag and an end tag denoted with a slash (<code>&lt;/p&gt;</code>). Everything in between is the content\nof the tag. The content of a tag can usually have additional HTML tags within them.</p><pre><code>&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n    &lt;head&gt;\n        &lt;title&gt;Example&lt;/title&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        &lt;p&gt;This is an example of a simple HTML page with one paragraph.&lt;/p&gt;\n    &lt;/body&gt;\n&lt;/html&gt;\n</code></pre><p>You may also copy and paste this code into a new file in your text editor or IDE, and save the file as \"index.html\". The\n\"index.html\" file is the default file that a web server will look for when accessing a website. After saving the file,\nyou can double click it to open it with your browser.</p><p>Now that we know the basic structure of an HTML page, let's try it out. </p>"
+                }
+            ]
+        },
+        {
+            "title": "Basic Elements",
+            "parts": [
+                {
+                    "title": "Introduction",
+                    "html": "<hr/><p>The basic elements of an HTML page are:</p><ul>\n<li>A text header, denoted using the <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, <code>&lt;h4&gt;</code>, <code>&lt;h5&gt;</code>, <code>&lt;h6&gt;</code> tags.</li>\n<li>A paragraph, denoted using the <code>&lt;p&gt;</code> tag.</li>\n<li>A horizontal ruler, denoted using the <code>&lt;hr&gt;</code> tag.</li>\n<li>A link, denoted using the <code>&lt;a&gt;</code> (anchor) tag.</li>\n<li>A list, denoted using the <code>&lt;ul&gt;</code> (unordered list), <code>&lt;ol&gt;</code> (ordered list) and <code>&lt;li&gt;</code> (list element) tags.</li>\n<li>An image, denoted using the <code>&lt;img&gt;</code> tag</li>\n<li>A divider, denoted using the <code>&lt;div&gt;</code> tag</li>\n<li>A text span, denoted using the <code>&lt;span&gt;</code> tag</li>\n</ul><p>The next few pages will give an overview of these basic HTML elements.</p><p>Each element can also have attributes - each element has a different set of attributes relevant to the element. There\nare a few global elements, the most common of them are:</p><ul>\n<li><code>id</code> - Denotes the unique ID of an element in a page. Used for locating elements by using links, JavaScript, and more.</li>\n<li><code>class</code> - Denotes the CSS class of an element. Explained in the <a href=\"/en/CSS_Basics\">CSS Basics</a> tutorial.</li>\n<li><code>style</code> - Denotes the CSS styles to apply to an element. Explained in the <a href=\"/en/CSS_Basics\">CSS Basics</a> tutorial.</li>\n<li><code>data-x</code> attributes - A general prefix for attributes that store raw information for programmatic purposes. \nExplained in detailed in the <a href=\"/en/Data_Attributes\">Data Attributes</a> section.</li>\n</ul>"
+                },
+                {
+                    "title": "Text headers and paragraphs",
+                    "html": "<p>There are six different types of text header you can choose from, h1 being the topmost heading with the largest\ntext, and h6 being the most inner heading with the smallest text. In general, you should have only one h1 tag\nwith a page, since it should be the primary description of the HTML page.</p><p>As we've seen in the last example, a paragraph is a block of text separated from the rest of the text around it.</p><p>Let's see an example of the <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code> and <code>&lt;p&gt;</code> tags in action:</p><pre><code>&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n    &lt;head&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        &lt;h1&gt;My First Page&lt;/h1&gt;\n        &lt;p&gt;This is my first page.&lt;/p&gt;\n        &lt;h2&gt;A secondary header.&lt;/h2&gt;\n        &lt;p&gt;Some more text.&lt;/p&gt;\n    &lt;/body&gt;\n&lt;/html&gt;\n</code></pre>"
+                },
+                {
+                    "title": "Horizontal rulers",
+                    "html": "<p>A horizontal ruler <code>&lt;hr&gt;</code> tag acts as a simple separator between page sections.</p><pre><code>&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n    &lt;head&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        &lt;h1&gt;My First Page&lt;/h1&gt;\n        &lt;p&gt;This is my first page.&lt;/p&gt;\n        &lt;hr&gt;\n        &lt;p&gt;This is the footer - all rights are reserved to me.&lt;/p&gt;\n    &lt;/body&gt;\n&lt;/html&gt;\n</code></pre>"
+                }
+            ]
+        },
+        {
+            "title": "Links",
+            "parts": [
+                {
+                    "title": "Introduction",
+                    "html": "<hr/><p>A link (\"anchor\") is a small span of text that will direct you to a different section in the page, or to a different \npage. To create a link, you will need to specify where you would like the user to be directed to when the link is \nclicked by specifying the <code>href</code> attribute.</p><p>For example:</p><pre><code>&lt;a href=\"https://www.google.com\"&gt;A link to Google&lt;/a&gt;\n</code></pre><p>To create a link to a different section in the same page, you will need to use a hash sign along with the element ID\nto where you would like the browser to jump to. For example:</p><pre><code>&lt;a href=\"#faq\"&gt;Click here to read the Frequently Asked Questions&lt;/a&gt;\n</code></pre><p>The element ID is denoted using the <code>id</code> attribute:</p><pre><code>&lt;h3 id=\"faq\"&gt;Frequently asked questions&lt;/h3&gt;\n&lt;p&gt;The first rule about fight club is that you do not talk about fight club.&lt;/p&gt;\n</code></pre><p>Let's try it out:</p><pre><code>&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n    &lt;head&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        &lt;h1&gt;My First Page&lt;/h1&gt;\n        &lt;p&gt;This is my first page.&lt;/p&gt;\n        &lt;a href=\"#faq\"&gt;Click here to read the Frequently Asked Questions&lt;/a&gt;\n        &lt;hr/&gt;\n        &lt;h3 id=\"faq\"&gt;Frequently asked questions&lt;/h3&gt;\n        &lt;p&gt;The first rule about fight club is that you do not talk about fight club.&lt;/p&gt;\n        &lt;p&gt;However, if you do have questions, please e-mail me at <a class=\"__cf_email__\" data-cfemail=\"02646d6d426063702c616d6f\" href=\"/cdn-cgi/l/email-protection\">[email\u00a0protected]</a>&lt;/p&gt;\n\n    &lt;/body&gt;\n&lt;/html&gt;\n</code></pre>"
+                }
+            ]
+        },
+        {
+            "title": "Lists",
+            "parts": [
+                {
+                    "title": "Introduction",
+                    "html": "<hr/><p>HTML provides a way to create both an ordered list (with elements counting up, 1, 2, 3...) and an unordered list with\nbullets instead of numbers. Lists are a good way to formalize a list of items and let the HTML styling do the work for\nyou.</p>"
+                },
+                {
+                    "title": "Ordered lists",
+                    "html": "<p>Here is an example of how to create an ordered list:</p><pre><code>&lt;p&gt;Here is a list of ordered items:&lt;/p&gt;\n&lt;ol&gt;\n    &lt;li&gt;First item&lt;/li&gt;\n    &lt;li&gt;Second item&lt;/li&gt;\n    &lt;li&gt;Third item&lt;/li&gt;\n&lt;/ol&gt;\n</code></pre><p>Ordered lists have a \"type\" attribute which defines the numbering convention to use.</p><p>To count using numbers, use type=\"1\":</p><pre><code>&lt;p&gt;Here is a list of ordered items:&lt;/p&gt;\n&lt;ol type=\"1\"&gt;\n    &lt;li&gt;First item&lt;/li&gt;\n    &lt;li&gt;Second item&lt;/li&gt;\n    &lt;li&gt;Third item&lt;/li&gt;\n&lt;/ol&gt;\n</code></pre><p>To count using uppercase letters, use type=\"A\":</p><pre><code>&lt;p&gt;Here is a list of ordered items:&lt;/p&gt;\n&lt;ol type=\"A\"&gt;\n    &lt;li&gt;First item&lt;/li&gt;\n    &lt;li&gt;Second item&lt;/li&gt;\n    &lt;li&gt;Third item&lt;/li&gt;\n&lt;/ol&gt;\n</code></pre><p>To count using lowercase letters, use type=\"a\":</p><pre><code>&lt;p&gt;Here is a list of ordered items:&lt;/p&gt;\n&lt;ol type=\"a\"&gt;\n    &lt;li&gt;First item&lt;/li&gt;\n    &lt;li&gt;Second item&lt;/li&gt;\n    &lt;li&gt;Third item&lt;/li&gt;\n&lt;/ol&gt;\n</code></pre><p>To count using uppercase roman numerals, use type=\"I\":</p><pre><code>&lt;p&gt;Here is a list of ordered items:&lt;/p&gt;\n&lt;ol type=\"I\"&gt;\n    &lt;li&gt;First item&lt;/li&gt;\n    &lt;li&gt;Second item&lt;/li&gt;\n    &lt;li&gt;Third item&lt;/li&gt;\n&lt;/ol&gt;\n</code></pre><p>To count using lowercase roman numerals, use type=\"i\":</p><pre><code>&lt;p&gt;Here is a list of ordered items:&lt;/p&gt;\n&lt;ol type=\"i\"&gt;\n    &lt;li&gt;First item&lt;/li&gt;\n    &lt;li&gt;Second item&lt;/li&gt;\n    &lt;li&gt;Third item&lt;/li&gt;\n&lt;/ol&gt;\n</code></pre>"
+                },
+                {
+                    "title": "Unordered lists",
+                    "html": "<p>Here is an example of how to create an unordered list:</p><p></p><p>Here is a list of unordered items:</p><br/><ul>\n<li>First item</li>\n<li>Second item</li>\n<li>Third item</li>\n</ul><p>To change the list style attributes, we can use the CSS attribute called <code>list-style-type</code>. The available types are:</p><ul>\n<li>disc</li>\n<li>circle</li>\n<li>square</li>\n<li>none</li>\n</ul><p>Here is an example of the disc list style type:</p><pre><code>&lt;p&gt;Here is a list of unordered items:&lt;/p&gt;    \n&lt;ul style=\"list-style-type: disc\"&gt;\n    &lt;li&gt;First item&lt;/li&gt;\n    &lt;li&gt;Second item&lt;/li&gt;\n    &lt;li&gt;Third item&lt;/li&gt;\n&lt;/ul&gt;\n</code></pre><p>Here is an example of the circle list style type:</p><pre><code>&lt;p&gt;Here is a list of unordered items:&lt;/p&gt;    \n&lt;ul style=\"list-style-type: circle\"&gt;\n    &lt;li&gt;First item&lt;/li&gt;\n    &lt;li&gt;Second item&lt;/li&gt;\n    &lt;li&gt;Third item&lt;/li&gt;\n&lt;/ul&gt;\n</code></pre><p>Here is an example of the square list style type:</p><pre><code>&lt;p&gt;Here is a list of unordered items:&lt;/p&gt;    \n&lt;ul style=\"list-style-type: square\"&gt;\n    &lt;li&gt;First item&lt;/li&gt;\n    &lt;li&gt;Second item&lt;/li&gt;\n    &lt;li&gt;Third item&lt;/li&gt;\n&lt;/ul&gt;\n</code></pre><p>Here is an example of the none list style type:</p><pre><code>&lt;p&gt;Here is a list of unordered items:&lt;/p&gt;    \n&lt;ul style=\"list-style-type: none\"&gt;\n    &lt;li&gt;First item&lt;/li&gt;\n    &lt;li&gt;Second item&lt;/li&gt;\n    &lt;li&gt;Third item&lt;/li&gt;\n&lt;/ul&gt;\n</code></pre>"
+                }
+            ]
+        },
+        {
+            "title": "Images",
+            "parts": [
+                {
+                    "title": "Introduction",
+                    "html": "<hr/><p>Images in HTML are inline elements that can be placed within a paragraph. To add an image, use the <code>&lt;img&gt;</code> tag \nalong with the <code>src</code> attribute to specify the location of the image.</p><pre><code>&lt;img src=\"/static/img/code.jpg\"&gt;\n</code></pre><p>You may use JavaScript to trigger an event when an image finished loading. </p><pre><code>&lt;img src=\"/static/img/code.jpg\" onload=\"alert('image loaded')\"&gt;\n</code></pre><p>Resizing the image can be done using the width and height attributes of an image, or alternatively by using CSS:</p><pre><code>&lt;img src=\"/static/img/code.jpg\" width=\"100\"&gt;\n\n&lt;img src=\"/static/img/code.jpg\" style=\"width: 100px\"&gt;\n</code></pre><p>Having an \"alt\" attribute set for the image is useful for when an image could not load or when you want to\nadd a tooltip description that will be displayed when hovering on top of an image.</p><pre><code>&lt;img src=\"/static/img/code.jpg\" style=\"width: 100px\" alt=\"A picture of some code\"&gt;\n</code></pre>"
+                },
+                {
+                    "title": "Image Types",
+                    "html": "<p>There are three main types of image formats which you should be using.</p><ul>\n<li>Lossless formats - useful for when you need pixel-perfect graphics, for example for logos. \nThe most common format is PNG. PNG also supports alpha transparency, meaning that you can use any background you want\nand overlay the image on top of that background.</li>\n<li>Lossy formats - useful for displaying rich images. Using a lossless format such as PNG would be an order \nof magnitude larger if used in such images. The most common format used in this category is JPG.<br/>\n</li>\n<li>Animated formats - useful for showing short animated images. The most common format is GIF, although it is a very old\nyet widely supported format, with many inherent drawbacks, such as a 256 color limit on each frame, and bad compression.</li>\n</ul>"
+                },
+                {
+                    "title": "Using the CSS float attribute with images",
+                    "html": "<p>Images can be set to float nearby text so they would blend with the text better. Notice the use of the <code>clear</code> CSS\nattribute - which directs the browser to break the floating effect after the first paragraph.</p><pre><code>&lt;img src=\"/static/img/lab.png\" style=\"float: left;\"&gt;\n\n&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore \nmagna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo \nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;\n\n&lt;p style=\"clear: both\"&gt;Second paragraph&lt;/p&gt;\n</code></pre>"
+                }
+            ]
+        },
+        {
+            "title": "Styles",
+            "parts": [
+                {
+                    "title": "Introduction",
+                    "html": "<hr/><p>CSS stands for Cascading Style Sheets, and is the visual language of the web. With it, we can design how HTML pages\nlook like. CSS allows us to separate between the data of the page, encoded within the HTML, and the styling of the \npage, encoded in the CSS of the page.</p><p>The reason that CSS is \"Cascading\" is because of the way it defines which styles to use. HTML elements inherit their \nstyles in a \"cascading\" manner, according to a very specific set of priorities, from lowest to highest:</p><ul>\n<li>The browser default</li>\n<li>Styles defined in the page </li>\n<li>Some styles will inherit a style to their childs, for example which font to use</li>\n<li>The last rule to be defined in the loading order will be the one that will kick into effect</li>\n<li>The element selector (for example, styling all <code>&lt;footer&gt;</code> elements)</li>\n<li>The class selector (for example, styling all <code>.main</code> elements)</li>\n<li>The ID selector, used to select a specific element in the page</li>\n<li>Media type (explained in the <a href=\"/en/Media_Queries\">Media Queries</a> section)</li>\n<li>Defining element specific CSS using an HTML \"style\" attribute</li>\n<li>The <code>!important</code> CSS override directive (Use this directive only as a last resort)</li>\n</ul><p>In addition, there are relative \"cascading\" properties that can stack up relative to their parent, for example line\nheight and font size, for example the <code>rem</code> (relative em) CSS metric which is defined relative to the parent, or\nthe percentage unit.</p>"
+                },
+                {
+                    "title": "Defining CSS",
+                    "html": "<p>CSS can be defined using four methods:</p><h4>1. Inline</h4><p>To define a CSS style using the inline method, use the HTML <code>style</code> attribute:</p><pre><code>&lt;p&gt;This is the default serif font. It is commonly used in \nprinted media for better readability, since letters\nare more distinct in serif fonts.&lt;/p&gt;\n\n&lt;p style=\"font-family: sans-serif\"&gt;This is a sans-serif font. \nIt is commonly used in screens because it is hard\nfor screens to render letters with such great detail.&lt;/p&gt;\n</code></pre><h4>2. Using a CSS tag</h4><p>Defining CSS inline is not recommended at all, avoid it as much as you can. You should always define a CSS stylesheet\nand use selectors to apply the stylesheets. The <a href=\"/en/Selectors\">Selectors</a> tutorial will give a detailed tutorial on how to \nselect HTML elements using CSS selectors.</p><p>Here is an example:</p><pre><code>&lt;!DOCTYPE html&gt;\n&lt;head&gt;\n    &lt;style&gt;\n        .nice {\n            font-family: sans-serif;\n        }\n    &lt;/style&gt;\n&lt;/head&gt;\n&lt;body&gt;\n    &lt;p&gt;This is the default serif font. It is commonly used in \n    printed media for better readability, since letters\n    are more distinct in serif fonts.&lt;/p&gt;\n\n    &lt;p class=\"nice\"&gt;This is a sans-serif font. \n    It is commonly used in screens because it is hard\n    for screens to render letters with such great detail.&lt;/p&gt;\n\n&lt;/body&gt;\n</code></pre><h4>3. Using a different stylesheet</h4><p>You can define a CSS stylesheet in an external file (usually noted with the .css extension) and load it.</p><p>Here is an example for defining the same CSS class defined in the previous example, but in a file called \"style.css\".</p><pre><code>.nice {\n    font-family: sans-serif;\n}\n</code></pre><p>To load the CSS file, we would need to use the <code>&lt;link&gt;</code> HTML tag in the following manner:</p><pre><code>&lt;link rel=\"stylesheet\" href=\"style.css\"&gt;\n</code></pre><p>Please note that the stylesheet should be positioned properly relative to the HTML page. In this example, both the\nHTML file and the CSS file would need to be in the same directory.</p><p>The link tag should be positioned inside the <code>&lt;head&gt;</code> section of the HTML page, like this:</p><pre><code>&lt;!DOCTYPE html&gt;\n&lt;head&gt;\n    &lt;link rel=\"stylesheet\" href=\"style.css\"&gt;    \n&lt;/head&gt;\n&lt;body&gt;\n    &lt;p&gt;This is the default serif font. It is commonly used in \n    printed media for better readability, since letters\n    are more distinct in serif fonts.&lt;/p&gt;\n\n    &lt;p class=\"nice\"&gt;This is a sans-serif font. \n    It is commonly used in screens because it is hard\n    for screens to render letters with such great detail.&lt;/p&gt;\n\n&lt;/body&gt;\n</code></pre>"
+                },
+                {
+                    "title": "4. Programmatic access",
+                    "html": "<p>HTML elements have the <code>style</code> attribute which you can use to add styles programmatically.</p><p>For example:</p><pre><code>&lt;!DOCTYPE html&gt;\n&lt;body&gt;\n    &lt;p id=\"serif-text\"&gt;This is the default serif font. It is commonly used in \n    printed media for better readability, since letters\n    are more distinct in serif fonts.&lt;/p&gt;\n\n    &lt;p class=\"nice\" id=\"sans-serif-text\"&gt;This is a sans-serif font. \n    It is commonly used in screens because it is hard\n    for screens to render letters with such great detail.&lt;/p&gt;\n\n    &lt;script&gt;\n        var sansSerifText = document.getElementById(\"sans-serif-text\");\n        sansSerifText.style.fontFamily = \"sans-serif\";\n    &lt;/script&gt;\n&lt;/body&gt;\n</code></pre>"
+                }
+            ]
+        },
+        {
+            "title": "Classes",
+            "parts": [
+                {
+                    "title": "Introduction",
+                    "html": "<hr/><p>CSS classes are commonly used to define a set of CSS styles and then apply them on an HTML element using selectors.\nTo define a class within a CSS stylesheet, use the dot selector, as follows:</p><pre><code>&lt;style&gt;\n.nice {\n    font-family: sans-serif;\n}\n&lt;/style&gt;\n</code></pre><p>Each HTML element can have a set of classes, ordered in a specific order. Each class will potentially add a set of \nCSS definitions according to the styles that were defined in the page. In this piece of code we have defined a CSS \nrule that will be applied to every element that contains the \"nice\" class. This means that once this piece of code\nhas been defined inside the HTML page, the following HTML paragraph will have the style applied to it:</p><pre><code>&lt;style&gt;\n.nice {\n    font-family: sans-serif;\n}\n&lt;/style&gt;\n&lt;p class=\"nice\"&gt;This is a short sentence.&lt;/p&gt;\n</code></pre>"
+                },
+                {
+                    "title": "HTML5 classList API",
+                    "html": "<p>HTML5 introduced a new way to edit the class list of an element using the <code>classList</code> collection. Each HTML element\nreturns the collection by accessing the <code>element.classList</code> member. The class list allows to add, remove, toggle\nand to check if an element contains a specific class.</p><p>Let's see an example:</p><pre><code>&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n&lt;head&gt;\n    &lt;style&gt;\n    .nice {\n        font-family: sans-serif;\n    }\n    &lt;/style&gt;\n&lt;/head&gt;\n&lt;body&gt;\n    &lt;p id=\"mytext\"&gt;My text&lt;/p&gt;\n    &lt;script&gt;\n        var el = document.getElementById(\"mytext\");\n        el.classList.add(\"nice\");    // adds the nice class to the paragraph\n        el.classList.remove(\"nice\"); // removes the nice class from the paragraph\n        el.classList.toggle(\"nice\"); // adds the nice class to the paragraph again, since it does not currently\n                                     // contain the nice class.\n\n        if (el.classList.contains(\"nice\")) {\n            alert(\"The element contains the 'nice' class.\");\n        }\n    &lt;/script&gt;\n&lt;/body&gt;\n&lt;/html&gt;\n</code></pre><p>Since HTML5 is a relatively new standard, it is not supported on all browsers. It is safe enough to use today though.\nHere is the compatibility table for the feature: <a href=\"http://caniuse.com/#search=classlist\">http://caniuse.com/#search=classlist</a></p>"
+                }
+            ]
+        },
+        {
+            "title": "Selectors",
+            "parts": [
+                {
+                    "title": "Introduction",
+                    "html": "<hr/><p>CSS Selectors are extremely useful for defining a query on a subset of the elements on a page. Querying allows us\nto do one of two things - declare a style to apply on the set of elements in a CSS stylesheet, \nor receive a list of HTML elements programatically according to the query, using the <code>querySelector</code> method.</p><p>Here is an example - if we would want to color all paragraphs in the document blue, we can simply write:</p><pre><code>&lt;style&gt;\np {\n    color: blue;\n}\n&lt;/style&gt;\n&lt;p&gt;I am blue&lt;/p&gt;\n&lt;p class=\"example\"&gt;I am also blue&lt;/p&gt;\n&lt;p id=\"last\" class=\"example\"&gt;I am blue as well&lt;/p&gt;\n</code></pre><p>The CSS selector \"p\" will select all \"p\" (paragraphs) in the page.</p><p>We can add constraints on the query and apply a different CSS to some elements using a more specific selector. \nLet's color all \"p\" elements that have the \"example\" class with green. Note that in this example, the order of the\nCSS definitions does not matter since the second selector is more specific - therefore it will override the less\nspecific CSS definition.</p><pre><code>&lt;style&gt;\np.example {\n    color: green;\n}\n\np {\n    color: blue;\n}    \n&lt;/style&gt;\n&lt;p&gt;I am blue&lt;/p&gt;\n&lt;p class=\"example\"&gt;I am green now&lt;/p&gt;\n&lt;p id=\"last\" class=\"example\"&gt;I am also green now&lt;/p&gt;\n</code></pre><p>We can repeat the same process but this time adding an ID selector instead of the class selector.</p><pre><code>&lt;style&gt;\np#last {\n    color: red;    \n}\n\np.example {\n    color: green;\n}\n\np {\n    color: blue;\n}    \n&lt;/style&gt;\n&lt;p&gt;I am blue&lt;/p&gt;\n&lt;p class=\"example\"&gt;I am green now&lt;/p&gt;\n&lt;p id=\"last\" class=\"example\"&gt;And now I am red&lt;/p&gt;\n</code></pre><p>CSS selectors also support the comma tag, for applying the same style block to a number of elements. \nThis example colors <code>h1</code>, <code>h2</code> and <code>h3</code> in blue and <code>h4</code>, <code>h5</code> and <code>h6</code> in red.</p><pre><code>&lt;style&gt;\nh1, h2, h3 {\n    color: blue;\n}\n\nh4, h5, h6 {\n    color: red;\n}\n&lt;/style&gt;\n&lt;h1&gt;h1 title&lt;/h1&gt;\n&lt;h2&gt;h2 title&lt;/h2&gt;\n&lt;h3&gt;h3 title&lt;/h3&gt;\n&lt;h4&gt;h4 title&lt;/h4&gt;\n&lt;h5&gt;h5 title&lt;/h5&gt;\n&lt;h6&gt;h6 title&lt;/h6&gt;\n</code></pre>"
+                },
+                {
+                    "title": "Descendant & Child Selectors",
+                    "html": "<p>Apart from specifying an element type, an ID and/or a class name, we can also create selectors that select \na specific child only if it is contained in a specific hierarchy. For example, let's say we want to color all\nthe <code>&lt;strong&gt;</code> tags in any paragraph that has the \"strongblue\" class.</p><pre><code>&lt;style&gt;\n.strongblue strong {\n    color: blue;    \n}\n&lt;/style&gt;\n&lt;p&gt;This is the &lt;strong&gt;first&lt;/strong&gt; sentence.&lt;/p&gt;\n&lt;p class=\"strongblue\"&gt;This is the &lt;strong&gt;second&lt;/strong&gt; sentence.&lt;/p&gt;\n</code></pre><p>There are two types of child selectors - an ancestor selector like this one, and a direct child selector that only\nselects the first level of hierarchy from the parent element that was selected. Here is the same code but with \na direct child selector:</p><pre><code>&lt;style&gt;\n.strongblue &gt; strong {\n    color: blue;    \n}\n&lt;/style&gt;\n&lt;p&gt;This is the &lt;strong&gt;first&lt;/strong&gt; sentence.&lt;/p&gt;\n&lt;p class=\"strongblue\"&gt;This is the &lt;strong&gt;second&lt;/strong&gt; sentence.&lt;/p&gt;\n</code></pre><p>If the <code>&lt;strong&gt;</code> element would have been encapsulated within a link, then this selector will not work since it \nrelies on a direct parent-child relationship between <code>.strongblue</code> and the <code>strong</code> element.</p><pre><code>&lt;style&gt;\n.strongblue &gt; strong {\n    color: blue;    \n}\n&lt;/style&gt;\n&lt;p&gt;This is the &lt;strong&gt;first&lt;/strong&gt; sentence.&lt;/p&gt;\n&lt;p class=\"strongblue\"&gt;This is the &lt;a&gt;&lt;strong&gt;second&lt;/strong&gt;&lt;/a&gt; sentence.&lt;/p&gt;\n</code></pre>"
+                },
+                {
+                    "title": "querySelector and querySelectorAll methods",
+                    "html": "<p>HTML5 introduced the new <code>document.querySelector</code> and <code>document.querySelectorAll</code> methods which allows us to run\nthe same selectors and receive the first element that corresponds to the selector, or a list of elements, \ndepending on the method you use.</p><p>Let's see an example:</p><pre><code>&lt;p class=\"nice\"&gt;This is a nice paragraph.&lt;/p&gt;\n&lt;p class=\"nice\"&gt;This is another nice paragraph.&lt;/p&gt;\n&lt;p&gt;This is a standard paragraph.&lt;/p&gt;\n\n&lt;script&gt;\n    // this code colors the first nice paragraph in blue\n    var firstNiceParagraph = document.querySelector(\".nice\");\n    firstNiceParagraph.style.color = \"blue\";\n&lt;/script&gt;\n</code></pre>"
+                }
+            ]
+        },
+        {
+            "title": "Pseudo-classes",
+            "parts": [
+                {
+                    "title": "Introduction",
+                    "html": "<hr/><p>HTML provides pseudo-classes, classes that are defined by default and allow us to apply a style on either:</p><ol>\n<li>An element which is in a specific state.</li>\n<li>A specific set of elements by their hierarchy, explained in detail in the <a href=\"/en/Advanced_Selectors\">Advanced Selectors</a> section. </li>\n</ol><p>We will discuss the former in this page, and give examples for each pseudo-class. Keep in mind that there is no\nway of inlining pseudo-classes in CSS.</p>"
+                },
+                {
+                    "title": "Links",
+                    "html": "<p>A link can either be in an unvisited state or a visited state. An unvisited link is a link that was not clicked on.\nA visited link is a link that was clicked on.</p><pre><code>&lt;style&gt;\na.special:link {\n    color: green;\n}\n\na.special:visited {\n    color: red;\n}\n&lt;/style&gt;\n\n&lt;p&gt;&lt;a href=\"#\"&gt;This is a standard link, it will become purple when clicked&lt;/a&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a class=\"special\" href=\"#\"&gt;This is a special colored link and become red when clicked&lt;/a&gt;&lt;/p&gt;\n</code></pre>"
+                },
+                {
+                    "title": "Hover",
+                    "html": "<p>The CSS :hover pseudo-class can be used to define styles for HTML elements which the user is hovering upon using \nthe mouse.</p><pre><code>&lt;style&gt;\np:hover {\n    background-color: yellow;\n}\n&lt;/style&gt;\n&lt;p&gt;Paragraphs now have a yellow background when hovering over them.&lt;/p&gt;\n</code></pre>"
+                },
+                {
+                    "title": "Active and Target",
+                    "html": "<p>The CSS :active pseudo-class defines the styles to use for an element which is currently being clicked.</p><pre><code>&lt;style&gt;\na:active {\n    font-weight: bold;    \n}\n&lt;/style&gt;\n&lt;p&gt;\n    &lt;a href=\"#first\"&gt;First Section&lt;/a&gt;\n    &lt;a href=\"#second\"&gt;Second Section&lt;/a&gt;\n    &lt;a href=\"#third\"&gt;Third Section&lt;/a&gt;\n&lt;/p&gt;\n</code></pre><p>Navigating to a specific section in the page also allows us to style the destination element.</p><pre><code>&lt;style&gt;\np:target {\n    font-weight: bold;    \n}\n&lt;/style&gt;\n&lt;p&gt;\n    &lt;a href=\"#first\"&gt;First Section&lt;/a&gt;\n    &lt;a href=\"#second\"&gt;Second Section&lt;/a&gt;\n    &lt;a href=\"#third\"&gt;Third Section&lt;/a&gt;\n&lt;/p&gt;\n&lt;p id=\"first\"&gt;This is the text of the first section.&lt;/p&gt;\n&lt;p id=\"second\"&gt;This is the text of the second section.&lt;/p&gt;\n&lt;p id=\"third\"&gt;This is the text of the third section.&lt;/p&gt;\n</code></pre>"
+                },
+                {
+                    "title": "Focus",
+                    "html": "<p>The CSS :focus pseudo-class defines the styles to use for an element which is focused.</p><pre><code>&lt;style&gt;\ninput:focus {\n    font-weight: bold;    \n}\n&lt;/style&gt;\n&lt;form&gt;\n    &lt;p&gt;&lt;input type=\"text\" value=\"First field\"&gt;&lt;/p&gt;\n    &lt;p&gt;&lt;input type=\"text\" value=\"Second field\"&gt;&lt;/p&gt;\n    &lt;p&gt;&lt;input type=\"text\" value=\"Third field\"&gt;&lt;/p&gt;        \n&lt;/form&gt;\n</code></pre><p>For more state-specific pseudo classes that relate to HTML form input elements, please visit <a href=\"/en/Input_Pseudo-classes\">Input Pseudo-classes</a>.</p><p>For advanced selectors that enable greater control on selecting specific elements, please visit <a href=\"/en/Advanced_Selectors\">Advanced Selectors</a>. </p>"
+                }
+            ]
+        },
+        {
+            "title": "UI Libraries",
+            "parts": [
+                {
+                    "title": "Introduction",
+                    "html": "<hr/><p>Over the years, many CSS &amp; JavaScript libraries have been introduced. The CSS libraries ease the process of creating a \nbeautiful website with little effort, and requires only very basic CSS knowledge to use. Since mastering CSS is a very\nhard task, the libraries enabled millions of developers to start creating websites easily, without previous knowledge\nin designing websites at all.</p><p>Here are a few examples of CSS libraries that were recently introduced and are ranking high on Google:</p><ul>\n<li>Bootstrap, by Twitter (<a href=\"http://getbootstrap.com/\">http://getbootstrap.com/</a>)</li>\n<li>Foundation, by Zurb (<a href=\"http://foundation.zurb.com/\">http://foundation.zurb.com/</a>)</li>\n<li>Pure CSS, by Yahoo (<a href=\"http://purecss.io/\">http://purecss.io/</a>)</li>\n<li>Bulma (based on the new CSS3 Flexbox specification - <a href=\"http://bulma.io/\">http://bulma.io/</a>)</li>\n<li>Skeleton (<a href=\"http://getskeleton.com/\">http://getskeleton.com/</a>)</li>\n<li>Semantic UI (<a href=\"http://semantic-ui.com/\">http://semantic-ui.com/</a>)</li>\n</ul>"
+                }
+            ]
+        },
+        {
+            "title": "Bootstrap",
+            "parts": [
+                {
+                    "title": "Introduction",
+                    "html": "<hr/><p>Web developers have been choosing Twitter Bootstrap as the leading framework for desining UI. As you might have\nnoticed, the default HTML styles are not appealing as the websites we see around every day. The Bootstrap framework\nallows us to write plain HTML that looks much more modern and useful than the default HTML stylesheet.</p><p>To load Bootstrap, you would need to load it from somewhere. We can load the Bootstrap library from a CDN by running\nthe following <code>&lt;link&gt;</code> tag:</p><pre><code>&lt;link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\"&gt;\n</code></pre><p>Loading items from a CDN is useful since CDNs (Content Delivery Networks) are already optimized for fast download\nspeeds from all around the world, and are highly available and reliant.</p><p>If you still want to load the Bootstrap files locally, then simply go to the website (<a href=\"https://getbootstrap.com\">https://getbootstrap.com</a>)\nand download it from there. Then, use the same tag, only this time have the href attribute point to the local\ncopy of bootstrap.min.css.</p><p>After adding it to your HTML page, it would probably look like this:</p><pre><code>&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n&lt;head&gt;\n    &lt;title&gt;Hello, Bootstrap!&lt;/title&gt;\n    &lt;link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\"&gt;\n&lt;/head&gt;\n&lt;body&gt;\n    &lt;p&gt;Hello, Bootstrap!&lt;/p&gt;\n&lt;/body&gt;\n&lt;/html&gt;\n</code></pre><p>You will immediately notice that the default font has also changed from the default serif font to a sans-serif font.</p><p>Now that you know how to load Boostrap, let's play around with a simple example. Note that this is part of the \nofficial Bootstrap documentation showing a simple example of how buttons look like using Bootstrap.</p><pre><code>&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n&lt;head&gt;\n    &lt;title&gt;Hello, Bootstrap!&lt;/title&gt;\n    &lt;link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\"&gt;\n&lt;/head&gt;\n&lt;body&gt;\n    &lt;button type=\"button\" class=\"btn btn-default\"&gt;Default&lt;/button&gt;\n    &lt;button type=\"button\" class=\"btn btn-primary\"&gt;Primary&lt;/button&gt;\n    &lt;button type=\"button\" class=\"btn btn-success\"&gt;Success&lt;/button&gt;\n    &lt;button type=\"button\" class=\"btn btn-info\"&gt;Info&lt;/button&gt;\n    &lt;button type=\"button\" class=\"btn btn-warning\"&gt;Warning&lt;/button&gt;\n    &lt;button type=\"button\" class=\"btn btn-danger\"&gt;Danger&lt;/button&gt;\n    &lt;button type=\"button\" class=\"btn btn-link\"&gt;Link&lt;/button&gt;\n&lt;/body&gt;\n&lt;/html&gt;\n</code></pre><p>This tutorial is incomplete. You are welcome to contribute one by sending me a pull request:<br/>\n<a href=\"https://github.com/ronreiter/interactive-tutorials\">https://github.com/ronreiter/interactive-tutorials</a></p>"
+                }
+            ]
+        },
+        {
+            "title": "Grid Layout",
+            "parts": [
+                {
+                    "title": "Introduction",
+                    "html": "<hr/><p>The \"Grid Layout\" is a concept used for designing websites using HTML and CSS. The basic concept of a grid allows us to\nbuild an HTML page by using rows as the basic blocks, and each row can be divided into up to 12 columns. </p><p>This tutorial is incomplete. You are welcome to contribute one by sending me a pull request:<br/>\n<a href=\"https://github.com/ronreiter/interactive-tutorials\">https://github.com/ronreiter/interactive-tutorials</a></p>"
+                }
+            ]
+        },
+        {
+            "title": "JavaScript",
+            "parts": [
+                {
+                    "title": "Introduction",
+                    "html": "<hr/><p>JavaScript is a scripting language that is mostly used in web development. JavaScript runs in the front-end, so it can update HTML elements, connect to a server (e.g Database server, File Server etc.), change page style (CSS) and more.</p><p>You can learn JavaScript here: <a href=\"https://www.learn-js.org/\">https://www.learn-js.org/</a></p>"
+                },
+                {
+                    "title": "JavaScript in HTML file",
+                    "html": "<p>HTML has the <code>&lt;script&gt;</code> tag, which allows scripts in a web page.</p><p>Example:</p><pre><code>&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n&lt;head&gt;\n&lt;title&gt;JavaScript&lt;/title&gt;\n&lt;/head&gt;\n&lt;body&gt;\n    &lt;p&gt;Hello, JavaScript!&lt;/p&gt;\n&lt;/body&gt;\n&lt;script&gt;\nconsole.log(\"Hello World!\");\n&lt;/script&gt;\n&lt;/html&gt;\n</code></pre><p>\"Hello World!\" will show in your browser's console.</p>"
+                },
+                {
+                    "title": "External JavaScript",
+                    "html": "<p>You can import a JavaScript (.js) file.\nThis is useful for organizing your website.</p><p>JS File (example.js):</p><pre><code>console.log(\"Hello World!\");\n</code></pre><p>HTML File:</p><pre><code>&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n&lt;head&gt;\n&lt;title&gt;External JavaScript&lt;/title&gt;\n&lt;/head&gt;\n&lt;body&gt;\n&lt;p&gt;External JavaScript!&lt;/p&gt;\n&lt;/body&gt;\n&lt;script src=\"example.js\"&gt;&lt;/script&gt;\n&lt;/html&gt;\n</code></pre><p>The <code>src</code>  attribute, imports the specified JavaScript file.</p><p>Also the <code>src</code> attribute, can import scripts from a CDN (Content Delivery Network). That is mostly used for including JavaScript libraries.</p><pre><code>&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n&lt;head&gt;\n&lt;title&gt;External CDN JavaScript&lt;/title&gt;\n&lt;/head&gt;\n&lt;body&gt;\n&lt;p&gt;External CDN JavaScript!&lt;/p&gt;\n&lt;/body&gt;\n&lt;script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"&gt;&lt;/script&gt;\n&lt;/html&gt;\n</code></pre>"
+                },
+                {
+                    "title": "The type attribute",
+                    "html": "<p>The <code>&lt;script&gt;</code> tag has the <code>type</code> attribute, which specifies the scripting language that is going to be used in the <code>&lt;script&gt;</code> tag. Now it's almost obsolete. JavaScript is the default.</p><p>They would use this in the HTML4 days:</p><pre><code>&lt;html&gt;\n&lt;head&gt;\n&lt;title&gt;Other scripting languages&lt;/title&gt;\n&lt;/head&gt;\n&lt;body&gt;\n&lt;p&gt;Other scripting languages&lt;/p&gt;\n&lt;/body&gt;\n&lt;script type=\"text/javascript\"&gt;\nconsole.log(\"Hello World\");\n&lt;/script&gt;\n&lt;/html&gt;\n</code></pre>"
+                }
+            ]
+        },
+        {
+            "title": "Colors",
+            "parts": [
+                {
+                    "title": "Introduction",
+                    "html": "<hr/><p>This page is empty. You are welcome to contribute the content by sending me a pull request:</p><p><a href=\"https://github.com/ronreiter/interactive-tutorials\">https://github.com/ronreiter/interactive-tutorials</a></p>"
+                }
+            ]
+        },
+        {
+            "title": "Display",
+            "parts": [
+                {
+                    "title": "Introduction",
+                    "html": "<hr/><p>This page is empty. You are welcome to contribute the content by sending me a pull request:</p><p><a href=\"https://github.com/ronreiter/interactive-tutorials\">https://github.com/ronreiter/interactive-tutorials</a></p>"
+                }
+            ]
+        },
+        {
+            "title": "Box Model",
+            "parts": [
+                {
+                    "title": "Introduction",
+                    "html": "<hr/><p>This page is empty. You are welcome to contribute the content by sending me a pull request:</p><p><a href=\"https://github.com/ronreiter/interactive-tutorials\">https://github.com/ronreiter/interactive-tutorials</a></p>"
+                }
+            ]
+        },
+        {
+            "title": "Icons",
+            "parts": [
+                {
+                    "title": "Introduction",
+                    "html": "<hr/><p>This page is empty. You are welcome to contribute the content by sending me a pull request:</p><p><a href=\"https://github.com/ronreiter/interactive-tutorials\">https://github.com/ronreiter/interactive-tutorials</a></p>"
+                }
+            ]
+        }
+    ],
+    "parts": 54
+}
